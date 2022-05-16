@@ -3,7 +3,7 @@ const kuvienOsoite = "https://image.tmdb.org/t/p/w1280";
 const Etsi =
     "https://api.themoviedb.org/3/search/movie?&api_key=64e742f1948eb880020743c9e79e451a&query=";
 
-const main = document.getElementById("main");
+
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 
@@ -31,10 +31,10 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     main.innerHTML = '';
      
-    const searchTerm = search.value;
+    const hakusana = search.value;
 
-    if (searchTerm) {
-        haeElokuvat(Etsi + searchTerm);
+    if (hakusana) {
+        haeElokuvat(Etsi + hakusana);
         search.value = "";
     }
 });
